@@ -2,11 +2,14 @@ import "./CardDestino.css"
 import Paris1 from "../assets/Paris1.avif"
 
 
-export default function CardDestino() {
+export default function CardDestino(props) {
     return (
         <>
-        <h1>Paris</h1>
-        <img src={Paris1} alt="" />
+        <div className="card">
+        <h1>{props.nome}</h1>
+        <img src={props.img} alt="" />
+        <p>{props.descricao}</p>
+        </div>
         </>
     );
 };
